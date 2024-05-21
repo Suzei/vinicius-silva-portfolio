@@ -21,8 +21,7 @@ export function Header() {
         </SocialMedia>
         <h1>VINICIUS</h1>
         <span>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id
-          sodales magna. Quisque scelerisque ut urna sed fringilla.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id sodales magna.
         </span>
       </div>
     </Container>

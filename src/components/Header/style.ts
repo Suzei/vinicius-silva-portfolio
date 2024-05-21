@@ -3,17 +3,19 @@ import Romero from "../../assets/romero.png";
 
 export const Container = styled.header`
   display: grid;
-  background: url(${Romero}) 200px no-repeat;
-  background-position: top left;
-  background-position-x: -60px;
-  padding-top: 122px;
+  background: url(${Romero}) no-repeat;
+  background-position-x: -90px;
+  background-position-y: 20px;
+  background-size: 350px;
+  padding-top: 99px;
   width: 100%;
 
   span {
-    display: inline-block;
+    display: block;
     color: ${(props) => props.theme.colors.yellow};
     font-size: 1.25rem;
     font-weight: 300;
+    margin-top: 30px;
   }
 `;
 

@@ -4,6 +4,7 @@ import { Wrapper } from "./components/Wrapper";
 import "./styles/fonts.css";
 import { GlobalTheme } from "./styles/theme";
 import { GlobalStyle } from "./styles/GlobalStyle";
+import { Stripes } from "./components/Stripes";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <GlobalStyle />
       <Wrapper>
         <Header />
+        <Stripes />
       </Wrapper>
     </ThemeProvider>
   );
