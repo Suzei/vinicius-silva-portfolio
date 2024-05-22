@@ -1,12 +1,12 @@
 import { StripesContainer } from "./styles";
 
-export function Stripes() {
+export function Stripes({isSectionStripe}: { isSectionStripe: boolean }) {
     return (
-        <StripesContainer>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <StripesContainer isSectionStripe={isSectionStripe} className="stripes">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
         </StripesContainer>
     )
 }

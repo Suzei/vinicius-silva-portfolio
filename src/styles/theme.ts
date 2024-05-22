@@ -12,11 +12,11 @@ export const GlobalTheme = {
   spacing: {
     desk: "110px",
     tablet: "448px",
-    mobile: "40px",
+    mobile: "20px",
   },
 
   breakpoints: {
-    tablet: "1024px",
-    mobile: "480px",
+    tablet: "768px",
+    mobile: "425px",
   },
 };

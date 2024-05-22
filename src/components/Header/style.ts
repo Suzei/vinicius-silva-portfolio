@@ -9,14 +9,6 @@ export const Container = styled.header`
   background-size: 350px;
   padding-top: 99px;
   width: 100%;
-
-  span {
-    display: block;
-    color: ${(props) => props.theme.colors.yellow};
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-top: 30px;
-  }
 `;
 
 export const SocialMedia = styled.div`
@@ -35,8 +27,24 @@ export const SocialMedia = styled.div`
   }
 
   a {
-    font-size: 1rem;
+    font-size: 0.688rem;
     color: ${(props) => props.theme.colors["gray-1"]};
     font-weight: lighter;
   }
 `;
+
+export const HeaderWrapper = styled.div`
+  flex-direction: column;
+
+  p {
+    display: flex;
+    text-align: left;
+    color: ${(props) => props.theme.colors.yellow};
+    font-size: 1.25rem;
+    white-space: initial;
+    font-weight: 300;
+    margin-top: 200px;
+    min-height: 0;
+    align-self: flex-end;
+  }
+`

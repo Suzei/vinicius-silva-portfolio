@@ -1,34 +1,40 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Container = styled.main`
   display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  padding: 0 ${(props) => props.theme.spacing.desk};
-
-  ${css`
+  max-width: 1024px;
+  margin: 0 auto;
     @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
       padding: 0 ${(props) => props.theme.spacing.mobile};
     }
-  `} h1,
+
+
+    @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+       .stripes:first-of-type   {
+        display: flex;
+      }
+
+      .stripes {
+        display: none;
+      }
+    }
+
+  h1,
     h2, h3, h4 {
     font-family: "Akkordeon", sans-serif;
   }
 
   h1 {
     color: ${(props) => props.theme.colors.orange};
-    font-size: 17.5rem;
+    font-size: 8.5rem;
     width: 100%;
     font-weight: 400;
-    text-align: center
   }
 
   h2 {
     color: transparent;
-   -webkit-text-stroke: 0.1px ${props => props.theme.colors.orange};
-    font-size: 4.375rem;
+   -webkit-text-stroke: 2px ${props => props.theme.colors.orange};
+    font-size: 5.313rem;
   }
 
   span,
