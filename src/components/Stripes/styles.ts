@@ -10,8 +10,8 @@ export const StripesContainer = styled.div<StripesProps>`
   }
 
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-      width: 100%;
-    }
+    width: 100%;
+  }
 
   display: flex;
   align-self: stretch;
@@ -27,7 +27,7 @@ export const StripesContainer = styled.div<StripesProps>`
       height: 1px;
     }
     background-color: ${props => props.theme.colors.yellow};
-    height: 85%;
+    height: 50%;
     opacity: 70%;
     width: 1px;
   }

@@ -16,6 +16,14 @@ function App() {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
           title="SOBRE MIM"
           hasStripes />
+
+          <Section
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
+          title="PROJETOS"
+          hasStripes
+          orientation="rtl"
+        />
+
       </Wrapper>
     </ThemeProvider>
   );

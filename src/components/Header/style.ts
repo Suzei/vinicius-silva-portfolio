@@ -3,22 +3,25 @@ import Player from "../../assets/player-larger.png";
 
 export const Container = styled.header`
   display: grid;
+  min-height: 600px;
   background: url(${Player}) no-repeat;
   background-position-x: 80px;
-  background-position-y: 20px;
+  background-position-y: -0px;
   background-size: 500px;
   padding-top: 99px;
   width: 100%;
+  align-items: flex-end;
 `;
 
 export const SocialMedia = styled.div`
-  display: grid;
+  display: flex;
   justify-content: flex-end;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
+
 
   div {
     display: flex;
-    align-items: center;
     gap: 8.32px;
   }
 
@@ -28,7 +31,7 @@ export const SocialMedia = styled.div`
 
   a {
     @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-      font-size: 1.625rem;
+      font-size: 0.813rem;
     }
 
     font-size: 0.688rem;
@@ -51,13 +54,14 @@ export const HeaderWrapper = styled.div`
     display: flex;
     text-align: left;
     color: ${props => props.theme.colors.yellow};
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     font-weight: 300;
+    max-width: 375px;
+    width: 100%;
   }
 `;
 export const HeaderResume = styled.div`
   display: grid;
-  gap: 30px;
+  gap: 15px;
   flex-direction: column;
-  flex: 1 1 auto;
 `

@@ -1,31 +1,39 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+
+interface SectionProps {
+  orientation: 'ltr' | 'rtl'
+}
 
 export const SectionContainer = styled.section`
-padding: 1rem;
 `
 
-export const SectionDesktop = styled.div`
+export const SectionDesktop = styled.div<SectionProps>`
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
 
   @media (min-width: ${props => props.theme.breakpoints.mobile}) {
-    order: -2;
   }
 
   h2 {
     white-space: nowrap;
     font-size: 10rem;
+
+    order: ${props => props.orientation === 'rtl' && 2};
+  }
+
+  .stripes {
+    order: ${props => props.orientation === 'rtl' && 1};
   }
 
   p {
     color: ${props => props.theme.colors.yellow};
     font-size: 1.25rem;
-    max-width: 350px;
+    max-width: 400px;
     font-weight: 300;
   }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   display: grid;
-  max-width: 1090px;
+  max-width: 970px;
   margin: 0 auto;
 
   h1,
@@ -15,13 +15,14 @@ export const Container = styled.main`
   h1 {
     color: ${props => props.theme.colors.orange};
     width: 100%;
-    font-size: 30.313rem;
+    font-size: 15.125rem;
     font-weight: 400;
   }
 
   h2 {
     color: transparent;
     -webkit-text-stroke: 1px ${props => props.theme.colors.orange};
+    font-size: 11.594rem;
     font-weight: lighter;
   }
 
