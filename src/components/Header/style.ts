@@ -67,10 +67,12 @@ export const SocialMediaTopic = styled.div`
 
 export const Resume = styled.p`
   &:nth-child(4) {
-display: none;
+ display: none;
+
     @media (max-width: ${props => props.theme.breakpoints.tablet}) {
       display: flex;
       align-items: flex-end;
+      font-size: 1.25rem;
     }
   }
 

@@ -1,21 +1,28 @@
+import { Carrousel } from "../Carrousel";
 import { Stripes } from "../Stripes";
 import { SectionContainer, SectionDesktop } from "./styles";
 
 interface SectionProps {
   title: string;
-  description: string;
+  description?: string;
   hasStripes?: boolean;
-  orientation?: 'rtl' | 'ltr'
+  orientation?: 'rtl' | 'ltr';
+  contentType?: 'carrousel' | 'skills' | 'exp';
 }
 
-export function Section({description, hasStripes = true, title, orientation = 'ltr'}: SectionProps) {
+export function Section({ description, hasStripes = true, title, contentType }: SectionProps) {
   return (
     <SectionContainer>
-      <SectionDesktop orientation={orientation}>
+      <SectionDesktop>
         <h2>{title}</h2>
         {hasStripes && <Stripes isSectionStripe={false} />}
-        <p>{ description }</p>
-    </SectionDesktop>
-      </SectionContainer>
-    )
+        <p>{description}</p>
+      </SectionDesktop>
+
+      {contentType === 'carrousel' && (
+        <Carrousel />
+      )}
+
+    </SectionContainer>
+  )
 }

@@ -22,8 +22,11 @@ function App() {
           title="PROJETOS"
           hasStripes
           orientation="rtl"
-        />
+          contentType="carrousel"
+        >
+        </Section>
 
+        <Section title="HABILIDADES" hasStripes={false} />
       </Wrapper>
     </ThemeProvider>
   );

@@ -6,18 +6,33 @@ export const SectionContainer = styled.section`
 
 export const SectionDesktop = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 400px auto 1fr;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 50px;
+  gap: 2rem;
 
-  @media (min-width: ${props => props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+
+    h2 {
+      text-align: center;
+    }
+
+    .stripes {
+      order: -1;
+    }
+  }
+
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
   }
 
   h2 {
-    white-space: nowrap;
     font-size: 10rem;
+    white-space: nowrap;
+    flex: 1;
   }
 
 
@@ -26,5 +41,6 @@ export const SectionDesktop = styled.div`
     font-size: 1.25rem;
     max-width: 400px;
     font-weight: 300;
-  }
+    width: 100%;
+}
 `;

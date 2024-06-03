@@ -1,25 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 0 auto;
   max-width: 1024px;
-  width: 100%;
+  margin: 0 auto;
 
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: 'Akkordeon', sans-serif;
-
-    @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-      font-size: 8.75rem;
-      align-items: center;
-  }
-
-  }
     padding: 0 ${props => props.theme.spacing.mobile};
 
 
@@ -35,6 +19,18 @@ export const Container = styled.main`
     -webkit-text-stroke: 1px ${props => props.theme.colors.orange};
     font-size: 11.594rem;
     font-weight: lighter;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Akkordeon', sans-serif;
+
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      font-size: 8.75rem;
+  }
+
   }
 
 
