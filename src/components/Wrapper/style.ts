@@ -2,17 +2,28 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   display: grid;
-  max-width: 970px;
+  grid-template-columns: 1fr;
   margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+
 
   h1,
   h2,
   h3,
   h4 {
     font-family: 'Akkordeon', sans-serif;
+
+    @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+      font-size: 8.75rem;
+      align-items: center;
   }
 
-  h1 {
+  }
+    padding: 0 ${props => props.theme.spacing.mobile};
+
+
+    h1 {
     color: ${props => props.theme.colors.orange};
     width: 100%;
     font-size: 15.125rem;
@@ -26,15 +37,6 @@ export const Container = styled.main`
     font-weight: lighter;
   }
 
-  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
-    padding: 0 ${props => props.theme.spacing.mobile};
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-size: 8.75rem;
-    }
-  }
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     .stripes:first-of-type {

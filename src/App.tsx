@@ -17,7 +17,7 @@ function App() {
           title="SOBRE MIM"
           hasStripes />
 
-          <Section
+        <Section
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
           title="PROJETOS"
           hasStripes
