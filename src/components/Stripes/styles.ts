@@ -5,6 +5,8 @@ interface StripesProps {
 }
 
 export const StripesContainer = styled.div<StripesProps>`
+
+grid-area: st;
   @media (min-width: ${props => props.theme.breakpoints.tablet}) {
     flex-direction: row;
   }

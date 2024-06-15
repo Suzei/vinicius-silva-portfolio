@@ -1,9 +1,12 @@
 import { EnvelopeOpen, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import { Container, HeaderResume, HeaderWrapper, Resume, SocialMedia, SocialMediaTopic } from "./style";
+import gsap from "gsap";
+import { useEffect } from "react";
 
 export function Header() {
+
   return (
-    <Container>
+    <Container className="box">
       <HeaderWrapper>
         <HeaderResume>
           <SocialMedia>

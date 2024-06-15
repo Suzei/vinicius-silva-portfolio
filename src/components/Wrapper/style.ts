@@ -1,11 +1,18 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
+export const Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;
 
-    padding: 0 ${props => props.theme.spacing.mobile};
-
+main {
+  section:nth-child(even) {
+   & > :first-child {
+    grid-template-columns: 1fr 30px 1fr;
+    grid-template-areas:
+    'tx st tl';
+    }
+   }
+  }
 
     h1 {
     color: ${props => props.theme.colors.orange};

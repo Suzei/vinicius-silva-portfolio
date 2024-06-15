@@ -12,21 +12,23 @@ function App() {
       <GlobalStyle />
       <Wrapper>
         <Header />
-        <Section
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
-          title="SOBRE MIM"
-          hasStripes />
+        <main>
+          <Section
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
+            title="SOBRE MIM"
+            hasStripes />
 
-        <Section
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
-          title="PROJETOS"
-          hasStripes
-          orientation="rtl"
-          contentType="carrousel"
-        >
-        </Section>
+          <Section
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
+            title="PROJETOS"
+            hasStripes
+            orientation="rtl"
+            contentType="carrousel"
+          >
+          </Section>
 
-        <Section title="HABILIDADES" hasStripes={false} />
+          <Section title="HABILIDADES" hasStripes={false} contentType="skills" />
+        </main>
       </Wrapper>
     </ThemeProvider>
   );

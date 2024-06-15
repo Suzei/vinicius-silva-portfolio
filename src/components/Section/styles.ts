@@ -2,15 +2,19 @@ import styled, { css } from "styled-components";
 
 
 export const SectionContainer = styled.section`
+
 `
 
 export const SectionDesktop = styled.div`
-  width: 100%;
   display: grid;
-  grid-template-columns: 400px auto 1fr;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  grid-template-columns: 1fr auto 1fr;
+
+  grid-template-areas:
+    'tl st tx'
+  ;
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
@@ -24,15 +28,11 @@ export const SectionDesktop = styled.div`
     }
   }
 
-
-  &:nth-child(2n) {
-    flex-direction: row-reverse;
-  }
-
   h2 {
-    font-size: 10rem;
+    font-size: 11rem;
     white-space: nowrap;
-    flex: 1;
+    grid-area: tl;
+
   }
 
 
@@ -42,5 +42,6 @@ export const SectionDesktop = styled.div`
     max-width: 400px;
     font-weight: 300;
     width: 100%;
+    grid-area: tx;
 }
 `;

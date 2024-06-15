@@ -1,5 +1,6 @@
 import Slider, { Settings } from "react-slick"
-import { SliderItem, SliderManipulator } from "./styles"
+import { SlideDetail, SliderItem, SliderManipulator } from "./styles"
+import { useCallback, useEffect, useRef } from "react"
 
 export function Carrousel() {
   const settings: Settings = {
@@ -19,8 +20,12 @@ export function Carrousel() {
         }
       },
     ]
-
   }
+
+  const changeCarrouselItem = useCallback(() => {
+    console.log('hello!')
+  }, [])
+
   return (
     <SliderManipulator>
       <div className="slider-container">
@@ -39,6 +44,14 @@ export function Carrousel() {
           </SliderItem>
         </Slider>
       </div>
+
+      <SlideDetail>
+        <div></div>
+
+        <div>
+          <p>Lorem ipsum dolor sit amet consecuteur</p>
+        </div>
+      </SlideDetail>
     </SliderManipulator>
   )
 }
