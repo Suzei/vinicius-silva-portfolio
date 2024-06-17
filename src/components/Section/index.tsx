@@ -1,4 +1,5 @@
 import { Carrousel } from "../Carrousel";
+import { Experience } from "../Experience";
 import { Skills } from "../Skills";
 import { Stripes } from "../Stripes";
 import { SectionContainer, SectionDesktop } from "./styles";
@@ -27,6 +28,12 @@ export function Section({ description, hasStripes = true, title, contentType }: 
       {contentType === 'skills' && (
         <Skills />
       )}
+
+      {
+        contentType === 'exp' && (
+          <Experience />
+        )
+      }
 
     </SectionContainer>
   )

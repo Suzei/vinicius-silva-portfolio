@@ -28,6 +28,9 @@ function App() {
           </Section>
 
           <Section title="HABILIDADES" hasStripes={false} contentType="skills" />
+
+          <Section title="EXPERIENCIAS" hasStripes={false} contentType="exp" />
+
         </main>
       </Wrapper>
     </ThemeProvider>
