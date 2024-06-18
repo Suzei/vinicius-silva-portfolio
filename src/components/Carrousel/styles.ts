@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import GridStandard from "../../styles/StandardStyles";
 
 export const SliderManipulator = styled.div`
 display: flex;
@@ -16,20 +17,9 @@ export const SliderItem = styled.div`
 
 `
 
-export const SlideDetail = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr;
+export const SlideDetail = styled(GridStandard)`
 grid-template-rows: 250px;
-gap: 34px;
 
-div:not(:first-child) {
-  border: 1px solid ${props => props.theme.colors.yellow};
-  color: ${props => props.theme.colors.yellow};
-  padding: 24px;
-  font-size: 1.25rem;
-  font-weight: 400;
-
-}
   & > :first-child {
     background-color: ${props => props.theme.colors.orange};
   }

@@ -53,7 +53,8 @@ main {
 
   span,
   p,
-  a {
+  a,
+  strong {
     font-family: 'Lato', sans-serif;
   }
 `;
