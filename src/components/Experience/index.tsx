@@ -6,12 +6,10 @@ export function Experience() {
 
       <div>
         <ExpItem>
-          <picture></picture>
           <h3>2023-2024</h3>
         </ExpItem>
 
         <ExpItem>
-          <picture></picture>
           <h3>2024-</h3>
         </ExpItem>
       </div>

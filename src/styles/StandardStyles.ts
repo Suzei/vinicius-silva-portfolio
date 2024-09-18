@@ -1,5 +1,4 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 const GridStandard = styled.div`
   display: grid;
@@ -19,6 +18,6 @@ const GridStandard = styled.div`
     font-size: 1.25rem;
     font-weight: 400;
   }
-`
+`;
 
-export default GridStandard
+export default GridStandard;

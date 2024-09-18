@@ -1,20 +1,25 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   max-width: 1024px;
   margin: 0 auto;
 
-main {
-  section:nth-child(even) {
-   & > :first-child {
-    grid-template-columns: 1fr 30px 1fr;
-    grid-template-areas:
-    'tx st tl';
+  main {
+    section:nth-child(even) {
+      & > :first-child {
+        grid-template-areas: 'tx st tl';
+
+        @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+          grid-template-areas:
+            'tl'
+            'st'
+            'tx';
+        }
+      }
     }
-   }
   }
 
-    h1 {
+  h1 {
     color: ${props => props.theme.colors.orange};
     width: 100%;
     font-size: 15.125rem;
@@ -36,18 +41,6 @@ main {
 
     @media (max-width: ${props => props.theme.breakpoints.tablet}) {
       font-size: 8.75rem;
-  }
-
-  }
-
-
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    .stripes:first-of-type {
-      display: flex;
-    }
-
-    .stripes {
-      display: none;
     }
   }
 

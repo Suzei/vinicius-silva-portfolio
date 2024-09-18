@@ -19,8 +19,6 @@ export function Section({ description, hasStripes = true, title, contentType }: 
         <h2>{title}</h2>
         {hasStripes && <Stripes isSectionStripe={false} />}
         <p>{description}</p>
-      </SectionDesktop>
-
       {contentType === 'carrousel' && (
         <Carrousel />
       )}
@@ -29,11 +27,16 @@ export function Section({ description, hasStripes = true, title, contentType }: 
         <Skills />
       )}
 
-      {
+{
         contentType === 'exp' && (
           <Experience />
         )
       }
+      </SectionDesktop>
+
+
+
+
 
     </SectionContainer>
   )
