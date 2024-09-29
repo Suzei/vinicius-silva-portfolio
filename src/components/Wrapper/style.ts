@@ -33,17 +33,6 @@ export const Container = styled.div`
     font-weight: lighter;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: 'Akkordeon', sans-serif;
-
-    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-      font-size: 8.75rem;
-    }
-  }
-
   span,
   p,
   a,

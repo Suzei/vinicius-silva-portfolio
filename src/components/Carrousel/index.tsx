@@ -1,8 +1,16 @@
 import Slider, { Settings } from "react-slick"
 import { SlideDetail, SliderItem, SliderManipulator } from "./styles"
-import { useCallback, useEffect, useRef } from "react"
+import { useCallback, useState } from "react"
+import { GlobalTheme } from "../../styles/theme"
+import { DataInterface } from "../../interfaces/DataInterface"
+import gsap from "gsap"
 
-export function Carrousel() {
+export function Carrousel({data}: {data?: DataInterface[]}) {
+
+  const defaultInfo = data?.[0]
+
+
+  const [carrousel, setCarrousel] = useState<DataInterface>({description: defaultInfo?.description, id: defaultInfo?.id, image: defaultInfo?.image, title: defaultInfo?.title})
   const settings: Settings = {
     dots: true,
     infinite: false,
@@ -11,19 +19,22 @@ export function Carrousel() {
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: Number(GlobalTheme.breakpoints.tablet.replace('px', '')),
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true
         }
       },
     ]
   }
 
-  const changeCarrouselItem = useCallback(() => {
-    console.log('hello!')
+  const changeCarrouselItem = useCallback((item: DataInterface) => {
+    gsap.fromTo('.pj', {
+      opacity: 0,
+    }, {opacity: 1})
+    setCarrousel(item)
   }, [])
 
   return (
@@ -31,25 +42,21 @@ export function Carrousel() {
       <div className="slider-container">
 
         <Slider className="slick-list" {...settings}>
-          <SliderItem>
-            <p>1</p>
+         {data?.map(images => (
+          <SliderItem onClick={() => changeCarrouselItem(images)} key={images.id}>
+            {images.id}
           </SliderItem>
+         ))}
 
-          <SliderItem>
-            <p>2</p>
-          </SliderItem>
-
-          <SliderItem>
-            <p>3</p>
-          </SliderItem>
         </Slider>
       </div>
 
-      <SlideDetail>
-        <div></div>
+      <SlideDetail key={carrousel.id} className="pj">
+        <div>{}</div>
 
         <div>
-          <p>Lorem ipsum dolor sit amet consecuteur</p>
+          <span>{carrousel.title}</span>
+          <p>{carrousel.description}</p>
         </div>
       </SlideDetail>
     </SliderManipulator>

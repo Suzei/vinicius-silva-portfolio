@@ -4,9 +4,24 @@ import { Wrapper } from "./components/Wrapper";
 import "./styles/fonts.css";
 import { GlobalTheme } from "./styles/theme";
 import { GlobalStyle } from "./styles/GlobalStyle";
-import { Section } from "./components/Section";
+import { ContentTypeEnum, Section } from "./components/Section";
+import Projects from './mocked/projects.json'
+import { useEffect, useState } from "react";
+import { DataInterface } from "./interfaces/DataInterface";
+
+interface DataArrayProps {
+  projects?: DataInterface[]
+  skills?: DataInterface[]
+  experience?: DataInterface[]
+}
 
 function App() {
+  const [data, setData] = useState<DataArrayProps>()
+
+  useEffect(() => {
+    setData({projects: Projects})
+  }, [])
+
   return (
     <ThemeProvider theme={GlobalTheme}>
       <GlobalStyle />
@@ -14,22 +29,22 @@ function App() {
         <Header />
         <main>
           <Section
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
+            description="Atualmente full-stack com 3 anos e meio de carreira no desenvolvimento, com uma faculdade em curso e sempre disposto a pensar soluções que vão colaborar com o sucesso de um grande negócio."
             title="SOBRE MIM"
-            hasStripes />
+             />
 
           <Section
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis. Proin at imperdiet velit, et sodales eros. Fusce tincidunt ex tempor dui placerat."
+            description="Abaixo, os principais projetos em que colaborei no desenvolvimento, desde landings até aplicações funcionais com React, Native e Node.js"
             title="PROJETOS"
-            hasStripes
             orientation="rtl"
-            contentType="carrousel"
+            contentType={ContentTypeEnum.carrousel}
+            data={data?.projects}
           >
           </Section>
 
-          <Section title="HABILIDADES" hasStripes={false} contentType="skills" />
+          <Section title="HABILIDADES" contentType={ContentTypeEnum.skills} data={data?.skills} />
 
-          <Section title="EXPERIENCIAS" hasStripes={false} contentType="exp" />
+          <Section title="EXPERIENCIAS" contentType={ContentTypeEnum.exp} data={data?.experience} />
 
         </main>
       </Wrapper>

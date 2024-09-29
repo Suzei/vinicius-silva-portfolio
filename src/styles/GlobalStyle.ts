@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -9,7 +9,20 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.colors["dark-1"]};
+    background-color: ${props => props.theme.colors['dark-1']};
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Akkordeon', sans-serif;
+    white-space: nowrap;
+
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      font-size: 8.75rem;
+    }
   }
 
 `;
