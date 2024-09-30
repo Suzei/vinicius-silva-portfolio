@@ -44,7 +44,7 @@ export function Section({ description, title, contentType = ContentTypeEnum.abou
 
       {
         contentType === ContentTypeEnum.exp && (
-          <Experience />
+          <Experience data={data} />
         )
       }
     </SectionContainer>

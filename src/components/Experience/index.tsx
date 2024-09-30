@@ -1,29 +1,41 @@
-import { Container, ExpDetails, ExpItem } from "./styles";
+import { useEffect, useState } from "react";
+import { DataInterface } from "../../interfaces/DataInterface";
+import { ExperienceContainer, ExperienceDetails, ExperiencePeriod, ExperiencePeriodsWrapper } from "./styles";
 
-export function Experience() {
+export function Experience({ data }: { data?: DataInterface[] }) {
+
+  const [experience, setExperience] = useState<DataInterface>()
+
+  function HandleExperienceChange(exp: DataInterface) {
+    setExperience(exp)
+  }
+
+
+  useEffect(() => {
+    if (data) {
+      setExperience(data[0])
+    }
+  }, [])
   return (
-    <Container>
+    <ExperienceContainer>
+      <ExperiencePeriodsWrapper>
+        {data?.map(item => (
+          <ExperiencePeriod disabled={item.id === experience?.id} onClick={() => HandleExperienceChange(item)}>
+            <img src={item.image} alt={`Ícone da empresa`} />
+            <span>{item.period}</span>
+          </ExperiencePeriod>
+        ))}
 
-      <div>
-        <ExpItem>
-          <h3>2023-2024</h3>
-        </ExpItem>
+      </ExperiencePeriodsWrapper>
 
-        <ExpItem>
-          <h3>2024-</h3>
-        </ExpItem>
-      </div>
+      <ExperienceDetails>
+        <div>
+          <strong>{experience?.encharge}</strong>
+          <p>{experience?.description}</p>
+        </div>
+        <h3>{experience?.period}</h3>
+      </ExperienceDetails>
 
-      <div>
-        <ExpDetails>
-          <div>
-            <strong>Emprese de Tal - <span>Lugar X</span></strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et augue sem. Ut id urna luctus tellus lacinia dictum et a turpis.</p>
-          </div>
-        </ExpDetails>
-
-        <h2>2024</h2>
-      </div>
-    </Container>
+    </ExperienceContainer>
   )
 }

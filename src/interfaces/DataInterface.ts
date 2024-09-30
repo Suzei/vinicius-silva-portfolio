@@ -5,4 +5,6 @@ export interface DataInterface {
   image?: string;
   extraImages?: string[];
   link?: string;
+  period?: string;
+  encharge?: string;
 }

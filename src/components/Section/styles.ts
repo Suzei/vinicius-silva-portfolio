@@ -32,7 +32,7 @@ export const SectionStripes = styled.div<SectionProps>`
       ? css`
           display: flex;
           flex-direction: column;
-          width: 100%;
+          width: 70%;
           gap: 5px;
         `
       : css`

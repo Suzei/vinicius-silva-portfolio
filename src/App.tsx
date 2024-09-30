@@ -9,6 +9,7 @@ import Projects from './mocked/projects.json'
 import Skills from './mocked/skills.json'
 import { useEffect, useState } from "react";
 import { DataInterface } from "./interfaces/DataInterface";
+import { ExperienceInfo } from "./mocked/experience";
 
 interface DataArrayProps {
   projects?: DataInterface[]
@@ -20,7 +21,7 @@ function App() {
   const [data, setData] = useState<DataArrayProps>()
 
   useEffect(() => {
-    setData({ projects: Projects, skills: Skills })
+    setData({ projects: Projects, skills: Skills, experience: ExperienceInfo })
   }, [])
 
   return (

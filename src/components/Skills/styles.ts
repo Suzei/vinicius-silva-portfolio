@@ -6,6 +6,10 @@ export const Container = styled(GridStandard)`
     line-height: 1.5;
     font-size: 1.5rem;
     transition: ease-in-out 1s;
+
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      font-size: 1rem;
+    }
   }
 `;
 
