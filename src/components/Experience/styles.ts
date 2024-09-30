@@ -28,7 +28,7 @@ export const Container = styled.div`
     width: 100%;
 
     h2 {
-      color: ${props => props.theme.colors.yellow};
+      color: ${props => props.theme.colors.purple};
       font-weight: 500;
       -webkit-text-stroke: 0;
     }

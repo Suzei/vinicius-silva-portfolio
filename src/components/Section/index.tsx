@@ -7,20 +7,21 @@ import { SectionContainer, SectionMarker, SectionStripes } from "./styles";
 export enum ContentTypeEnum {
   'carrousel',
   'skills',
-  'exp'
+  'exp',
+  'about'
 }
 
 interface SectionProps {
   title: string;
   description?: string;
   orientation?: 'rtl' | 'ltr';
-  contentType?: ContentTypeEnum;
+  contentType: ContentTypeEnum;
   data?: DataInterface[],
 }
 
-export function Section({ description, title, contentType, data }: SectionProps) {
+export function Section({ description, title, contentType = ContentTypeEnum.about, data }: SectionProps) {
   return (
-    <SectionContainer>
+    <SectionContainer contentType={contentType} >
       <SectionMarker>
         <h2>{title}</h2>
         <SectionStripes contentType={contentType}>

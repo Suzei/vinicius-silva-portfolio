@@ -2,18 +2,12 @@ import styled, { css } from 'styled-components';
 import { ContentTypeEnum } from '.';
 
 interface SectionProps {
-  contentType?: ContentTypeEnum;
+  contentType: ContentTypeEnum;
 }
 
 export const SectionContainer = styled.section<SectionProps>`
   display: grid;
   grid-template-columns: 1fr;
-
-  &:nth-child(even) {
-    > div:first-child {
-      flex-direction: row-reverse;
-    }
-  }
 `;
 
 export const SectionMarker = styled.div`
@@ -34,7 +28,7 @@ export const SectionMarker = styled.div`
 
 export const SectionStripes = styled.div<SectionProps>`
   ${props =>
-    !props.contentType
+    props.contentType === ContentTypeEnum.about
       ? css`
           display: flex;
           flex-direction: column;
@@ -45,15 +39,4 @@ export const SectionStripes = styled.div<SectionProps>`
           visibility: hidden;
           height: 0;
         `}
-`;
-
-export const Vl = styled.div`
-  display: none;
-
-  @media (min-width: ${props => props.theme.breakpoints.tablet}) {
-    display: block;
-    height: 140px;
-    width: 0.1px;
-    background: ${props => props.theme.colors.yellow};
-  }
 `;

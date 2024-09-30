@@ -17,6 +17,14 @@ export const ProjectWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   color: ${props => props.theme.colors.yellow};
 
   span {
@@ -35,6 +43,14 @@ export const ProjectInfos = styled.div`
   display: flex;
   flex-direction: column;
   align-self: center;
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
 
   div:first-child {
     display: flex;

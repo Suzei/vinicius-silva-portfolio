@@ -30,6 +30,7 @@ function App() {
         <Header />
         <main>
           <Section
+            contentType={ContentTypeEnum.about}
             description="Meu nome é Vinícius Silva (vsilvadev nas redes) e atualmente sou full-stack. Com 3 anos de carreira e uma bagagem extensa de broncas resolvidas, sempre estou disposto a aprender novas tecnologias, com o solene intuito de pensar maior todo dia; cotidiano esse que me permite dar continuidade a minha formação em Análise e Desenvolvimento de Sistemas."
             title="SOBRE MIM"
           />
