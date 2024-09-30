@@ -6,6 +6,7 @@ import { GlobalTheme } from "./styles/theme";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import { ContentTypeEnum, Section } from "./components/Section";
 import Projects from './mocked/projects.json'
+import Skills from './mocked/skills.json'
 import { useEffect, useState } from "react";
 import { DataInterface } from "./interfaces/DataInterface";
 
@@ -19,7 +20,7 @@ function App() {
   const [data, setData] = useState<DataArrayProps>()
 
   useEffect(() => {
-    setData({projects: Projects})
+    setData({ projects: Projects, skills: Skills })
   }, [])
 
   return (
@@ -29,14 +30,12 @@ function App() {
         <Header />
         <main>
           <Section
-            description="Atualmente full-stack com 3 anos e meio de carreira no desenvolvimento, com uma faculdade em curso e sempre disposto a pensar soluções que vão colaborar com o sucesso de um grande negócio."
+            description="Meu nome é Vinícius Silva (vsilvadev nas redes) e atualmente sou full-stack. Com 3 anos de carreira e uma bagagem extensa de broncas resolvidas, sempre estou disposto a aprender novas tecnologias, com o solene intuito de pensar maior todo dia; cotidiano esse que me permite dar continuidade a minha formação em Análise e Desenvolvimento de Sistemas."
             title="SOBRE MIM"
-             />
+          />
 
           <Section
-            description="Abaixo, os principais projetos em que colaborei no desenvolvimento, desde landings até aplicações funcionais com React, Native e Node.js"
             title="PROJETOS"
-            orientation="rtl"
             contentType={ContentTypeEnum.carrousel}
             data={data?.projects}
           >

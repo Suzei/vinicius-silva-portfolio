@@ -22,7 +22,7 @@ export const Container = styled.div`
   h1 {
     color: ${props => props.theme.colors.orange};
     width: 100%;
-    font-size: 15.125rem;
+    font-size: 14rem;
     font-weight: 400;
   }
 
@@ -31,6 +31,18 @@ export const Container = styled.div`
     -webkit-text-stroke: 1px ${props => props.theme.colors.orange};
     font-size: 11.594rem;
     font-weight: lighter;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Akkordeon', sans-serif;
+    white-space: nowrap;
+
+    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+      font-size: 8.75rem;
+    }
   }
 
   span,

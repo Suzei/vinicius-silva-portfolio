@@ -3,21 +3,51 @@
     "id": 0,
     "title": "Inovahu",
     "description": "Landing page com opção de contato para o site da empresa que trabalho, feito com React e Tailwind, utilizando EmailJS e RHF para os forms",
-    "image": ""
+    "image": "/images/hu-1.png",
+    "extraImages": [
+
+    ],
+    "link": "https://inovahu.com/"
   },
 
   {
     "id": 1,
     "title": "Veloso de Araujo Advogados",
-    "description": "Página voltada para advocacia, com um blog totalmente personalizado e diversas páginas. Feito com Wordpress e plugins do mesmo.",
-    "image": ""
+    "description": "Página voltada para advocacia, com um blog diverso em páginas e totalmente personalizável. Feito com Wordpress e PHP, tangendo a possibilidade de contato direto com o dono da página.",
+    "image": "/images/veloso-araujo.png",
+    "extraImages": [],
+    "link": "https://velosodearaujo.com.br/"
 
   },
 
   {
     "id": 2,
+    "title": "Cerberus Cargo",
+    "description": "Se tratando de uma reformulação, a landing page da Cerberus Cargo (@cerberuscargo), uma empresa de agenciamento de cargas. Utilizando o WIX para recriação do design e adição de Whatsapp, parallax e cards.",
+    "image": "/images/cerberus-1.png",
+    "link": "https://www.cerberuscargo.com/",
+    "extraImages": [
+    ]
+  },
+
+  {
+    "id": 3,
     "title": "Blog Saude by CINCO",
-    "description": "Blog",
-    "image": ""
+    "description": "Blog personalizado com Wordpress e PHP, modificado totalmente via CSS Custom da própria ferramenta.",
+    "image": "/images/blog-hu.png",
+    "link": "https://blog.saudecinco.com/",
+    "extraImages": [
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "IF Comics",
+    "description": "Projeto desenvolvido para um trabalho de faculdade. O objetivo do site é ser um leitor e uploader que se assemelha ao tapas.io. Nesse projeto utilizei AWS, especificamente o S3 para armazenar os PDFs e consumi-lós no back que roda em Node.js..",
+    "image": "/images/if-c.png",
+    "link": "https://if-comics.vercel.app/",
+    "extraImages": [
+    ]
   }
+
 ]

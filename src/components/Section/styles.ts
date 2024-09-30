@@ -18,6 +18,8 @@ export const SectionContainer = styled.section<SectionProps>`
 
 export const SectionMarker = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   line-height: 1.5;
   align-items: center;
   gap: 1rem;
@@ -31,24 +33,18 @@ export const SectionMarker = styled.div`
 `;
 
 export const SectionStripes = styled.div<SectionProps>`
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  gap: 10px;
-
-  hr {
-    visibility: hidden;
-    display: none;
-  }
   ${props =>
-    !props.contentType &&
-    css`
-      @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-        hr {
-          visibility: visible;
-        }
-      }
-    `}
+    !props.contentType
+      ? css`
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 5px;
+        `
+      : css`
+          visibility: hidden;
+          height: 0;
+        `}
 `;
 
 export const Vl = styled.div`

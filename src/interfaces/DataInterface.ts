@@ -3,4 +3,6 @@ export interface DataInterface {
   title?: string;
   description?: string;
   image?: string;
+  extraImages?: string[];
+  link?: string;
 }

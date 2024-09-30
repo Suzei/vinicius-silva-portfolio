@@ -13,16 +13,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    font-family: 'Akkordeon', sans-serif;
-    white-space: nowrap;
 
-    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-      font-size: 8.75rem;
-    }
-  }
 
 `;

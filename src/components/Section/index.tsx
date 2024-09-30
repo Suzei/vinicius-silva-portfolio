@@ -1,5 +1,5 @@
 import { DataInterface } from "../../interfaces/DataInterface";
-import { Carrousel } from "../Carrousel";
+import { Projects } from "../Projects";
 import { Experience } from "../Experience";
 import { Skills } from "../Skills";
 import { SectionContainer, SectionMarker, SectionStripes, Vl } from "./styles";
@@ -20,37 +20,28 @@ interface SectionProps {
 
 export function Section({ description, title, contentType, data }: SectionProps) {
   return (
-    <SectionContainer contentType={contentType}>
+    <SectionContainer>
       <SectionMarker>
         <h2>{title}</h2>
-        <SectionStripes>
+        <SectionStripes contentType={contentType}>
           <hr />
           <hr />
           <hr />
           <hr />
-
-    {!contentType && (
-      <>
-        <Vl />
-        <Vl />
-        <Vl />
-        <Vl />
-     </>
-    )}
         </SectionStripes>
 
         <p>{description}</p>
       </SectionMarker>
 
       {contentType === ContentTypeEnum.carrousel && (
-        <Carrousel data={data}  />
+        <Projects data={data} />
       )}
 
       {contentType === ContentTypeEnum.skills && (
-        <Skills />
+        <Skills data={data} />
       )}
 
-{
+      {
         contentType === ContentTypeEnum.exp && (
           <Experience />
         )

@@ -1,8 +1,5 @@
 import { EnvelopeOpen, GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 import { Container, HeaderResume, HeaderWrapper, Resume, SocialMedia, SocialMediaTopic } from "./style";
-import gsap from "gsap";
-import { useEffect } from "react";
-
 export function Header() {
 
   return (
@@ -25,7 +22,7 @@ export function Header() {
           </SocialMedia>
 
           <Resume>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id sodales magna. Quisque scelerisque ut urna sed fringilla.
+            Desenvolvedor full-stack em atuação profissional, freela e projetos avulsos.
           </Resume>
         </HeaderResume>
 
@@ -45,7 +42,7 @@ export function Header() {
         </SocialMedia>
         <h1>VINICIUS</h1>
         <Resume>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id sodales magna. Quisque scelerisque ut urna sed fringilla.
+          Desenvolvedor full-stack em atuação profissional, freela e projetos avulsos.
         </Resume>
       </HeaderWrapper>
     </Container>

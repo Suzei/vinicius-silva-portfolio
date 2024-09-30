@@ -1,0 +1,54 @@
+[
+  {
+    "id": 0,
+    "title": "React.JS",
+    "description": "Manejo pleno da ferramenta principal de trabalho, onde já desenvolvi junto a outros frameworks (Next.js), páginas dinâmicas, soluções com Context API, Hooks personalizados e chamadas para APIs externas. "
+  },
+
+  {
+    "id": 1,
+    "title": "React Native",
+    "description": "Criação de aplicativos desde sua concepção com Expo ou CRA, até manipulação de flatlists, gerenciamento de sessão do usuário, com cookies e APis externas. "
+  },
+
+  {
+    "id": 2,
+    "title": "Styled Components",
+    "description": "Fonte principal da estilização. Todo esse portifólio foi desenvolvido utilizando o mesmo, então nada mais do que uma prova do meu manejo da ferramenta, do que esse exemplo."
+  },
+
+  {
+    "id": 3,
+    "title": "JavaScript",
+    "description": "Manipulação da DOM e eventos com JavaScript, arrays, loops, promises."
+  },
+
+  {
+    "id": 4,
+    "title": "Node.js",
+    "description": " - Construção de REST API utilizando Clean Arch e SOLID, aplicando o conceito de injeção de dependências. - Utilizo Express na maioria dos casos para aplicações REST, mas também tenho experiência com os frameworks Nest.JS e Fastify. - Integração com banco de dados utilizando algum ORM disponível no mercado (Prisma ou TypeORM). "
+  },
+
+  {
+    "id": 5,
+    "title": "PostgresQL",
+    "description": "Escrita de queries, geralmente sendo utilizado como drive nas aplicações ORMs (explicito esse procedimento em Node.js)"
+  },
+
+  {
+    "id": 6,
+    "title": "AWS",
+    "description": "Aplicações utilizando S3 são comuns no meu dia a dia, sempre consumindo um banco em Dynamo que, através das Lambdas que crio, são populados. Da criação do módulo até deploy utilizando SAM e AWS CLI."
+  },
+  {
+    "id": 7,
+    "title": "Docker",
+    "description": "Criação de container local, com instalações de imagens docker na própria máquina, utilizando o Compose para montagem e yaml para criação de VMs, tanto no Linux ou WSL."
+  },
+
+  {
+    "id": 8,
+    "title": "WordPress",
+    "description": "Criação de landing pages e blogs, com intuito de construir um site que ofereça várias páginas para navegação. explicitando a estrutura de um negócio, movimentando para um CTA. (vide o exemplo em Cerberus Cargo)"
+  }
+]
