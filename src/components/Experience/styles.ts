@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Ball from './../../assets/example.png';
 
 export const Container = styled.div`
   display: grid;
