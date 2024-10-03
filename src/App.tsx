@@ -7,7 +7,6 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 import { ContentTypeEnum, Section } from "./components/Section";
 import Projects from './mocked/projects.json'
 import Skills from './mocked/skills.json'
-import { useEffect, useState } from "react";
 import { DataInterface } from "./interfaces/DataInterface";
 import { ExperienceInfo } from "./mocked/experience";
 
@@ -18,7 +17,7 @@ interface DataArrayProps {
 }
 
 function App() {
-  const [data, setData] = useState<DataArrayProps>({ projects: Projects, skills: Skills, experience: ExperienceInfo })
+  const data: DataArrayProps = ({ projects: Projects, skills: Skills, experience: ExperienceInfo })
 
 
   return (
