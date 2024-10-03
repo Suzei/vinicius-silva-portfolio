@@ -4,7 +4,7 @@ import { ExperienceContainer, ExperienceDetails, ExperiencePeriod, ExperiencePer
 
 export function Experience({ data }: { data?: DataInterface[] }) {
 
-  const [experience, setExperience] = useState<DataInterface>()
+  const [experience, setExperience] = useState<DataInterface | undefined>(data?.[0])
 
   function HandleExperienceChange(exp: DataInterface) {
     setExperience(exp)

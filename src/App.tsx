@@ -18,11 +18,8 @@ interface DataArrayProps {
 }
 
 function App() {
-  const [data, setData] = useState<DataArrayProps>()
+  const [data, setData] = useState<DataArrayProps>({ projects: Projects, skills: Skills, experience: ExperienceInfo })
 
-  useEffect(() => {
-    setData({ projects: Projects, skills: Skills, experience: ExperienceInfo })
-  }, [])
 
   return (
     <ThemeProvider theme={GlobalTheme}>

@@ -23,6 +23,7 @@ export const SectionMarker = styled.div`
     padding: 1rem 0rem;
     font-size: 1.2rem;
     font-weight: 300;
+    text-align: center;
   }
 `;
 

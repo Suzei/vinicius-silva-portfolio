@@ -69,4 +69,10 @@ export const ProjectImage = styled.img`
   border: 3px solid ${props => props.theme.colors.yellow};
   object-fit: contain;
   width: 555px;
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    width: 100%;
+    object-fit: fill;
+    height: 250px;
+  }
 `;

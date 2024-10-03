@@ -5,6 +5,9 @@ const GridStandard = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 34px;
 
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    grid-template-columns: 1fr;
+  }
   & > :first-child {
     display: flex;
     flex-wrap: wrap;

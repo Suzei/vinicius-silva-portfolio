@@ -24,6 +24,7 @@ export const ExperiencePeriod = styled.button`
   align-items: center;
   justify-content: space-between;
   background-color: ${props => props.theme.colors.yellow};
+  cursor: pointer;
 
   &:disabled {
     background-color: ${props => props.theme.colors.purple};
@@ -47,16 +48,38 @@ export const ExperiencePeriod = styled.button`
 
 export const ExperienceDetails = styled.div`
   display: flex;
+  /* flex-wrap: wrap-reverse; */
   justify-content: space-between;
   border: 1px solid ${props => props.theme.colors.purple};
   padding: 10px;
   align-items: center;
 
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    flex-wrap: wrap-reverse;
+  }
+
   color: ${props => props.theme.colors.yellow};
 
   h3 {
-    font-size: 100px;
+    font-size: 7.25rem;
     font-weight: 300;
     color: ${props => props.theme.colors.purple};
+  }
+
+  p {
+    max-width: 900px;
+    font-weight: 300;
+  }
+
+  p,
+  strong {
+    font-size: 1.5rem;
+  }
+
+  div {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 1rem;
   }
 `;
